@@ -76,14 +76,13 @@ function obliczAkcyze(kurs, cenaSamochodu, rodzajTablic, rodzajNapedu, rodzajTab
     if (checkboxElement.checked) { akcyza = akcyza / 2 }
     else { }
     cena = tlumaczenie_dokumentow + oplata_komunikacyjna + cenaSamochoduWPln + akcyza + tablice;
-    document.getElementById('wartoscKosztZakupu').textContent = cenaSamochoduWPln + "zł";
-    document.getElementById('wartoscTabliceWywozowe').textContent = tablice + "zł";
-    document.getElementById('wartoscBadanieTechniczne').textContent = badania + "zł";
-    document.getElementById('wartoscTlumaczenieDokumentow').textContent = tlumaczenie_dokumentow + "zł";
-    document.getElementById('wartoscOplataKomunikacyjna').textContent = oplata_komunikacyjna + "zł";
-    document.getElementById('wartoscUCAkcyza').textContent = akcyza + "zł";
-    document.getElementById('wartoscKosztyRazem').textContent = cena + "zł";
-    console.log(cena);
+    document.getElementById('wartoscKosztZakupu').textContent = cenaSamochoduWPln.toFixed(2) + "zł";
+    document.getElementById('wartoscTabliceWywozowe').textContent = tablice.toFixed(2) + "zł";
+    document.getElementById('wartoscBadanieTechniczne').textContent = badania.toFixed(2) + "zł";
+    document.getElementById('wartoscTlumaczenieDokumentow').textContent = tlumaczenie_dokumentow.toFixed(2) + "zł";
+    document.getElementById('wartoscOplataKomunikacyjna').textContent = oplata_komunikacyjna.toFixed(2) + "zł";
+    document.getElementById('wartoscUCAkcyza').textContent = akcyza.toFixed(2) + "zł";
+    document.getElementById('wartoscKosztyRazem').textContent = cena.toFixed(2) + "zł";
     return cena;
 
 }
