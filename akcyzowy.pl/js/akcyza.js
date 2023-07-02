@@ -42,14 +42,14 @@ document.getElementById("akcyza").addEventListener("submit", async function (eve
     kurs = kursy.get(waluta);
     console.log(kurs);
     console.log(kursy);
-    obliczAkcyze(kurs, cenaSamochodu, tablice_wywozowe, rodzajNapedu);
+    obliczAkcyze(kurs, cenaSamochodu, tablice_wywozowe, rodzajNapedu, rodzajTablic);
 });
 
 function hybryda(kwota) {
     return kwota / 2;
 }
 
-function obliczAkcyze(kurs, cenaSamochodu, rodzajTablic, rodzajNapedu) {
+function obliczAkcyze(kurs, cenaSamochodu, rodzajTablic, rodzajNapedu, rodzajTablic) {
     console.log(kurs);
     let cenaSamochoduWPln = kurs * cenaSamochodu;
     let akcyza;
@@ -72,7 +72,7 @@ function obliczAkcyze(kurs, cenaSamochodu, rodzajTablic, rodzajNapedu) {
     }
 
     var checkboxElement = document.getElementById('hybryda_0');
-
+    console.log(tablice);
     if (checkboxElement.checked) { akcyza = akcyza / 2 }
     else { }
     cena = tlumaczenie_dokumentow + oplata_komunikacyjna + cenaSamochoduWPln + akcyza + tablice;
